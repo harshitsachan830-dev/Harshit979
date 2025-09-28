@@ -1,0 +1,137 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #fffdf5;
+    color: #333;
+    padding: 20px;
+}
+
+h1, h2, h3, h4 {
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: blue;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h2, h3 {
+    color: #2c3e50;
+    margin-top: 30px;
+}
+
+ul, ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+img {
+    display: block;
+    margin: 10px 0;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+a {
+    display: inline-block;
+    margin: 5px 0 20px 0;
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+i, u, b {
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* Header replacement styling (since <header> is misused) */
+header {
+    font-weight: bold;
+    font-size: 16px;
+    color: #444;
+    margin-top: 10px;
+}
+
+/* Table Styling */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-size: 16px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    text-align: center;
+}
+
+th {
+    background-color: #f4a261;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #ffe8cc;
+}
+
+/* Center headings properly */
+.centered-heading {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Responsive Table (optional for better mobile view) */
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+
+    tr {
+        margin-bottom: 15px;
+    }
+
+    td, th {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    td::before, th::before {
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        white-space: nowrap;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    th:nth-of-type(1)::before { content: "Package"; }
+    th:nth-of-type(2)::before { content: "Destination"; }
+    th:nth-of-type(3)::before { content: "Price"; }
+
+    td:nth-of-type(1)::before { content: "Package"; }
+    td:nth-of-type(2)::before { content: "Destination"; }
+    td:nth-of-type(3)::before { content: "Price"; }
+}
